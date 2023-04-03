@@ -9,7 +9,7 @@ Design a navigation system for a food delivering robot that can determine the mo
 <img src="https://user-images.githubusercontent.com/90817926/229553971-511dfc04-fafc-422a-b330-4b270cab8eba.png" width="500"/>
 </P>
 
-A ***Tetrix Prizm*** has been programmed to perform the navigation task. The bot is tasked with delivering to a specific location and needs to determine the optimal route while avoiding traps that may hinder its progress.
+A ***Tetrix MAX*** has been programmed to perform the navigation task. The bot is tasked with delivering to a specific location and needs to determine the optimal route while avoiding traps that may hinder its progress.
 
 
 
