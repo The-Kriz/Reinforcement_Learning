@@ -1,7 +1,7 @@
-from Aruco_Perspective_Crop import *
-from Path import *
-from Tetrix_Motion import *
 import cv2
+from Path import *
+from Computer_Vision import *
+from Tetrix_Motion import *
 
 ## no HC05 part
 
