@@ -17,7 +17,7 @@ A ***Tetrix MAX*** has been programmed to perform the navigation task. The bot i
 Design a system that can play Tic-Tac-Toe game against a human player with optimal moves.</br>
 </br>
 <p align="center" >
-<img src="https://user-images.githubusercontent.com/90817926/226292800-10cd87c9-f21b-426c-9854-16e62f53d50b.gif" width="500" />
+<img src="https://user-images.githubusercontent.com/90817926/226292800-10cd87c9-f21b-426c-9854-16e62f53d50b.gif" width="400" />
 <img src="https://user-images.githubusercontent.com/90817926/202924572-ab7ccacc-a54c-42e8-886b-f72dbbefb25c.png" width="400" />
 </P>
 </br>
