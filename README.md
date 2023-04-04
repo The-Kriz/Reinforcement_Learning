@@ -13,7 +13,7 @@ Design a navigation system for a food delivering robot that can determine the mo
 
 A ***Tetrix MAX*** has been programmed to perform the navigation task. The bot is tasked with delivering to a specific location and needs to determine the optimal route while avoiding traps that may hinder its progress.
 
-## Tic_Tac_Toe
+## Tic Tac Toe
 Design a system that can play Tic-Tac-Toe game against a human player with optimal moves.</br>
 </br>
 <p align="center" >
