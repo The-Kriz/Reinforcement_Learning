@@ -1,5 +1,5 @@
-import serial
 from time import sleep
+import serial
 
 '''
 Forward   = 1
