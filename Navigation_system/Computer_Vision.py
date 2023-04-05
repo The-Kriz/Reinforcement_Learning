@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from cv2 import aruco
-
+from Computer_Vision_Constant import *
 
 def Distance(P1, P2):
     """
@@ -72,8 +72,7 @@ def Coordinates(coordinates_sorted, image, location):
     point_1_3 = arr1[location[1]]
     point_2_3 = arr1[location[2]]
     point_3_3 = arr1[location[3]]
-    return Perspective_wrap_crop(point_0_2, point_3_1, point_2_0, point_1_3, image)
-    # return Perspective_wrap_crop(     BL  ,    TL   ,   TR    ,   BR    , image)
+    return Perspective_wrap_crop(point_0_2, point_3_1, point_2_1, point_1_2, image)
 
 
 def DetectAruco(Image, cornerReturn=False, imageReturn=False):
@@ -120,7 +119,7 @@ def rearrangeAruco(ids, corners, CustomOrder=False):
     return idsReordered, cornersReordered
 
 
-def ArucoCropImage(Image):
+def ArucoCropImage(Image,CustomOrder=False):
     """
     Crop image based on 4 Aruco markers
     :param Image:
@@ -131,7 +130,7 @@ def ArucoCropImage(Image):
 
     if ids is not None:
         int_corners = np.int0(corners)
-        reorderedIds, reorderedCorners = rearrangeAruco(ids, int_corners)
+        reorderedIds, reorderedCorners = rearrangeAruco(ids, int_corners, CustomOrder)
 
         pos = []
         for i in range(len(reorderedIds)):
@@ -148,25 +147,33 @@ def ArucoCropImage(Image):
     return croppedImage
 
 
-def SplitImage(image):
+def SplitImage(image, imageReturn=False):
     """
     Splits the image in to 4X4 (16) cells and checks individual image for Aruco markers
     :param image:
     :return: Aruco ID in each cell (ordered from [0,0] to [3,3])
     """
     height, width, _ = image.shape
-    cell_size = int(min(height, width) / 4)
+    num_rows = 4
+    num_cols = 4
+    cell_width = int(width / num_cols)
+    cell_height = int(height / num_rows)
+    gridImage = image.copy()
     cellArucoID = []
-    for i in range(4):
-        for j in range(4):
-            x1 = j * cell_size
-            y1 = i * cell_size
-            x2 = x1 + cell_size
-            y2 = y1 + cell_size
+    for i in range(num_rows):
+        for j in range(num_cols):
+            x1 = j * cell_width
+            y1 = i * cell_height
+            x2 = x1 + cell_width
+            y2 = y1 + cell_height
+            gridImage = cv2.rectangle(image, (x1,y1), (x2,y2), (0,0,255), 2)
             cell = image[y1:y2, x1:x2]
             arucoIdNo = DetectAruco(cell)
             cellArucoID.append(arucoIdNo)
+    if imageReturn:
+        return cellArucoID, gridImage
     return cellArucoID
+
 
 def ArucoIdToGrid(idLocation):
     """
@@ -178,22 +185,23 @@ def ArucoIdToGrid(idLocation):
     :param idLocation: Aruco ID in each cell (ordered from [0,0] to [3,3])
     :return: Frozen lake Grid
     """
-    start = 4
-    home = 5
-    holeMarkerID = [16, 17, 18, 19]
-    frozenFloorMarkerID = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    start = tetrixStart
+    home = tetrixHome
+    holeMarkerID = GridHoleMarkerID
+    # frozenFloorMarkerID = GridFrozenFloorMarkerID
     grid = []
     for i in range(4):
         row = ""
         for j in range(4):
             index = i * 4 + j
-            if idLocation[index] == 4:
+            if idLocation[index] == start:
                 row += "S"
-            elif idLocation[index] in frozenFloorMarkerID:
-                row += "F"
-            elif idLocation[index] == 5:
+            elif idLocation[index] == home:
                 row += "G"
             elif idLocation[index] in holeMarkerID:
                 row += "H"
+            else :
+                row += "F"
         grid.append(row)
     return grid
+
