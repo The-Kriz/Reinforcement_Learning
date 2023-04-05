@@ -1,7 +1,8 @@
+from Computer_Vision_Constant import *
+from cv2 import aruco
 import numpy as np
 import cv2
-from cv2 import aruco
-from Computer_Vision_Constant import *
+
 
 def Distance(P1, P2):
     """
