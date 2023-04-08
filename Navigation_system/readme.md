@@ -20,3 +20,5 @@ A ***Tetrix MAX*** has been programmed to perform the navigation task. The bot i
 
 ## Hardware Architecture Diagram
 <img width="2708" src="https://user-images.githubusercontent.com/90817926/230712012-5a8d0d5a-e3f1-493e-a4dd-3609c1d0dc1c.png">
+## Software Architecture Diagram
+<img width="1504" alt="Untitled (7)" src="https://user-images.githubusercontent.com/90817926/230716193-8ac071ac-8be8-431f-b4d4-31eda6594c17.png">
