@@ -1,4 +1,4 @@
-## Navigation system
+# Navigation system
 Design a navigation system for a food delivering robot that can determine the most efficient way to reach a goal location while avoiding trap locations.
 </br>
 </br>
@@ -16,3 +16,7 @@ Design a navigation system for a food delivering robot that can determine the mo
 </br>
 
 A ***Tetrix MAX*** has been programmed to perform the navigation task. The bot is tasked with delivering to a specific location and needs to determine the optimal route while avoiding traps that may hinder its progress.
+
+
+## Hardware Architecture Diagram
+<img width="2708" src="https://user-images.githubusercontent.com/90817926/230712012-5a8d0d5a-e3f1-493e-a4dd-3609c1d0dc1c.png">
