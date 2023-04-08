@@ -6,12 +6,12 @@ Design a navigation system for a food delivering robot that can determine the mo
 </br>
 </br>
 <p align="center" >
-<img src="https://user-images.githubusercontent.com/90817926/229552813-a3f7d9a2-860f-44e0-bc4a-d2d71591334a.png" width="380" />
-<img src="https://user-images.githubusercontent.com/90817926/230063192-40bb2234-9317-4612-9430-f2d203accf6c.gif" width="450" />
+<img src="https://user-images.githubusercontent.com/90817926/229552813-a3f7d9a2-860f-44e0-bc4a-d2d71591334a.png" width="250" />
+<img src="https://user-images.githubusercontent.com/90817926/230063192-40bb2234-9317-4612-9430-f2d203accf6c.gif" width="350" />
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/90817926/229553971-511dfc04-fafc-422a-b330-4b270cab8eba.png" width="400" />
-<img src="https://user-images.githubusercontent.com/90817926/230064233-9161ecee-3b22-44e8-8d44-9f0426501609.gif" height="250" />
+<img src="https://user-images.githubusercontent.com/90817926/229553971-511dfc04-fafc-422a-b330-4b270cab8eba.png" width="300" />
+<img src="https://user-images.githubusercontent.com/90817926/230064233-9161ecee-3b22-44e8-8d44-9f0426501609.gif" height="150" />
 </P>
 
 </br>
